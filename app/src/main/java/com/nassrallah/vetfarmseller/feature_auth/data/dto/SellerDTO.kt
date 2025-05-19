@@ -1,0 +1,17 @@
+package com.nassrallah.vetfarmseller.feature_auth.data.dto
+
+import com.nassrallah.vetfarmseller.feature_auth.domain.entity.Category
+import com.nassrallah.vetfarmseller.feature_inventory.data.dto.ProductDTO
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class SellerDTO(
+    val id: Int? = null,
+    val user: UserDTO,
+    val businessName: String,
+    val wilaya: String,
+    val commune: String,
+    val address: String,
+    val category: Category,
+    val products: List<ProductDTO> = emptyList()
+)
